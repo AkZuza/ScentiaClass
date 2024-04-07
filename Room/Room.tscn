@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Room/Floor/Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Room/Chair/Chair.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Room/Wall/Wall.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Room/Shelf/Shelf.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Room/Desk/Desk.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Room/Blackboard/Blackboard.tscn" type="PackedScene" id=6]
+
+[node name="Room" type="Spatial"]
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0 )
+
+[node name="Chairs" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.72244 )
+
+[node name="SchoolChair_01" parent="Chairs" instance=ExtResource( 2 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 13.6266, 0, 0 )
+
+[node name="SchoolChair_02" parent="Chairs" instance=ExtResource( 2 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 24.1931, 0, 0 )
+
+[node name="SchoolChair_03" parent="Chairs" instance=ExtResource( 2 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -13.7362, 0, 0 )
+
+[node name="SchoolChair_04" parent="Chairs" instance=ExtResource( 2 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -22.4802, 0, 0 )
+
+[node name="Walls" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0 )
+
+[node name="Wall" parent="Walls" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50.5941, 5.17237, 0 )
+
+[node name="Wall2" parent="Walls" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 50.0194, 5.12955, 0 )
+
+[node name="Wall3" parent="Walls" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 5.08958, 49.8525 )
+
+[node name="Wall4" parent="Walls" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 5.08958, -49.7375 )
+
+[node name="Shelves" type="Spatial" parent="."]
+
+[node name="steel_frame_shelves" parent="Shelves" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.9987, 1.38724, -38.3982 )
+
+[node name="steel_frame_shelves2" parent="Shelves" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.9481, 1.38724, -38.3982 )
+
+[node name="Desks" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19.2199 )
+
+[node name="SchoolDesk_01_1k" parent="Desks" instance=ExtResource( 5 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 24.7261, 0, -6.9977 )
+
+[node name="SchoolDesk_01_1k2" parent="Desks" instance=ExtResource( 5 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, 13.3197, 0, -6.9977 )
+
+[node name="SchoolDesk_01_1k3" parent="Desks" instance=ExtResource( 5 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -13.9206, 0, -6.9977 )
+
+[node name="SchoolDesk_01_1k4" parent="Desks" instance=ExtResource( 5 )]
+transform = Transform( 7, 0, 0, 0, 7, 0, 0, 0, 7, -23.1789, 0, -6.9977 )
+
+[node name="Blacboards" type="Spatial" parent="."]
+
+[node name="blackboard3" parent="." instance=ExtResource( 6 )]
+transform = Transform( -1.18021e-07, 0, 4.7, 0, 2.7, 0, -2.7, 0, -2.05444e-07, -1.36902, 2.01487, 46.329 )
